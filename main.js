@@ -115,5 +115,44 @@ function new_image(get_image){
                 new_image("cloud.jpg");
             
             }
+
+
+
     }
 
+   function up(){
+ if(playery>=0){
+  playery = playery - blockimgheight;
+  canvas.remove(playerobject);
+  player_update();
+ }
+
+   }
+
+   function down(){
+    if(playery<500){
+     playery = playery + blockimgheight;
+     canvas.remove(playerobject);
+     player_update();
+    }
+   
+      }
+
+
+      function left(){
+        if(playerx>0){
+         playerx = playerx - blockimgwidth;
+         canvas.remove(playerobject);
+         player_update();
+        }
+       
+          }
+
+          function right(){
+            if(playerx<850){
+             playerx = playerx + blockimgwidth;
+             canvas.remove(playerobject);
+             player_update();
+            }
+           
+              }
